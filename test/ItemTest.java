@@ -32,4 +32,12 @@ public class ItemTest {
         item = new Item<String, String>("name", "ram");
         assertFalse(item.hasSameKey("nam"));
     }
+
+    @Test
+    public void testHasSameValue() throws Exception {
+        Item<String, String> item;
+        item = new Item<String, String>("name", "ram");
+        assertTrue(item.hasSameValue("ram"));
+        assertFalse(item.hasSameKey("abc"));
+    }
 }
