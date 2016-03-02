@@ -19,6 +19,10 @@ class Item<K, V> {
         this.value = value;
     }
 
+    public boolean hasSameKey(K key) {
+        return this.key == null ? this.key == key : this.key.equals(key);
+    }
+
     public String toString(){
         return this.key+"="+this.value;
     }
